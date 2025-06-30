@@ -62,7 +62,9 @@ export class SalesVisitMapComponent {
       ).addTo(map);
 
       circle
-        .bindPopup(`Visit Count :${salesVisitsData.visitCount}`)
+        .bindPopup(
+          `Visit Count :${salesVisitsData.visitCount}<br> lat: ${salesVisitsData.latitude}<br> long: ${salesVisitsData.longitude}`
+        )
         .openPopup();
     });
   }
