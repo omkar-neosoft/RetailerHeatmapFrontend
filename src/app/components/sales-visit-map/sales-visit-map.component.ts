@@ -60,6 +60,10 @@ export class SalesVisitMapComponent {
           fillOpacity: 0.4,
         }
       ).addTo(map);
+
+      circle
+        .bindPopup(`Visit Count :${salesVisitsData.visitCount}`)
+        .openPopup();
     });
   }
 }
