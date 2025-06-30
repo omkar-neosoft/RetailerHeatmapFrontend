@@ -1,0 +1,21 @@
+<div style="margin-bottom: 20px; margin-top: 5px; display: flex; align-items: center; justify-content: end;">
+  <button style="padding: 10px; background-color: green; color: white; border-radius: 8px; cursor: pointer;"
+    routerLink="/add-sales-visits">Add Sales Visits</button>
+</div>
+
+<!-- This is the container for the Leaflet map -->
+<div id="map" style="height: 400px; width: 100%;"></div>
+
+<!-- Optional: You can add a list or other UI elements for visits -->
+<div *ngIf="salesVisits.length">
+  <h3>Sales Visits</h3>
+  <ul>
+    <li *ngFor="let visit of salesVisitsAllData">
+      <p>-------------------------------</p>
+      <strong>Retailer:</strong> {{ visit.retailerId }}<br>
+      <strong>Location:</strong> {{ visit.latitude }}, {{ visit.longitude }}<br>
+      <strong>Date:</strong> {{ visit.visitDate | date }}<br>
+      <br>
+    </li>
+  </ul>
+</div>

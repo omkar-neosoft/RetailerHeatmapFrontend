@@ -1,0 +1,23 @@
+<form (ngSubmit)="addSalesVisit()">
+    <div>
+        <label for="retailerId">Retailer ID</label>
+        <input type="number" id="retailerId" [(ngModel)]="salesVisit.retailerId" name="retailerId" required>
+    </div>
+    <div>
+        <label for="salespersonId">Salesperson ID</label>
+        <input type="number" id="salespersonId" [(ngModel)]="salesVisit.salespersonId" name="salespersonId" required>
+    </div>
+    <div>
+        <label for="visitDate">Visit Date</label>
+        <input type="datetime-local" id="visitDate" [(ngModel)]="salesVisit.visitDate" name="visitDate" required>
+    </div>
+    <div>
+        <label for="latitude">Latitude</label>
+        <input type="number" id="latitude" [(ngModel)]="salesVisit.latitude" name="latitude" required>
+    </div>
+    <div>
+        <label for="longitude">Longitude</label>
+        <input type="number" id="longitude" [(ngModel)]="salesVisit.longitude" name="longitude" required>
+    </div>
+    <button type="submit">Add Sales Visit</button>
+</form>
